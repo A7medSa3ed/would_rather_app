@@ -10,7 +10,6 @@ const saveUser = user => ({ type: SAVE_NEW_USER, user });
 
 export const addNewUser = userName => dispatch => {
   dispatch(showLoading());
-  console.log(userName);
   saveNewUser(userName).then(user => {
     dispatch(saveUser(user));
     dispatch(hideLoading());

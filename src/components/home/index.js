@@ -47,7 +47,7 @@ export class Index extends Component {
 
     /* unAnsweredQuestions, answeredQuestions,
         authedUserId,loading, userName --> COmming From Connect Redux */
-    // userQuestions, usersAnswers ,userId--> comming from User Profile Comonent
+    // userQuestions, usersAnswers ,userId--> comming from User Profile Component
 
     // check if there is logged user
     if (authedUserId === "") return <Redirect to="/" />;
@@ -87,7 +87,8 @@ export class Index extends Component {
                   unAnsweredQuestions={
                     userQuestions ? userQuestions : unAnsweredQuestions
                   }
-                  loading={loading}
+                  Answered={userQuestions ? true : false}
+                  userId={userId}
                 />
               </TabPane>
               <TabPane tabId={1}>

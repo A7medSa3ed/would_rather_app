@@ -69,7 +69,6 @@ const SignUp = ({ users, dispatch, handleSignup }) => {
   };
   const handleSubmit = () => {
     if (validUser.valid === "valid") {
-      console.log("vaid");
       dispatch(addNewUser(username));
       handleSignup();
     }

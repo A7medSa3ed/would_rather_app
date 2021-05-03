@@ -15,16 +15,15 @@ const AnswerDetails = ({ question, author, history }) => {
   const optionTwoPercentage =
     (question.optionTwo.votes.length / percentage) * 100;
 
-  // get the active Tab
-  const backToActiveTab = history?.location?.state
-    ? history.location.state.tab
-    : 1;
-
   /* if you enter user profile from leader board,
     so we need to save userId to go back to it's profile */
-  const path =
-    history.location.state.userId && `/users/${history.location.state.userId}`;
+  const backToUserProfile =
+    history.location.state?.userId && `/users/${history.location.state.userId}`;
 
+  // get the active Tab
+  const backToActiveTab = history?.location?.state?.tab;
+
+  console.log(history);
   return (
     <div className="answer_details card col-lg-6 col-sm-10">
       <Container>
@@ -86,9 +85,9 @@ const AnswerDetails = ({ question, author, history }) => {
             outline
             onClick={() =>
               history.push({
-                pathname: path ? path : "/",
+                pathname: backToUserProfile || "/",
                 // send tab 1 to return user to answers active tab
-                state: path ? { tab: 1 } : { tab: backToActiveTab },
+                state: { tab: backToActiveTab },
               })
             }
           >

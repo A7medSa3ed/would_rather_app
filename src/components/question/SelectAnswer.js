@@ -19,15 +19,18 @@ const SelectAnswer = ({
 
   /* because state of redux destroyed when hot reloading,
      so if the user reload this page it will redirect him to loggin page */
-
+  console.log(history);
   const handleChange = e => {
     setAnswer(e.target.value);
   };
-
   const handleSubmit = e => {
     e.preventDefault();
+    const userId = history.location.state?.userId;
     dispatch(saveAnswer(authedUserId, questionId, answer));
-    history.push({ pathname: `/questions/${questionId}`, state: { tab: 0 } });
+    history.push({
+      pathname: `/questions/${questionId}`,
+      state: { userId, tab: 0 },
+    });
   };
 
   return (

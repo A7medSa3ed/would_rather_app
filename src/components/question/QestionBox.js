@@ -3,9 +3,15 @@ import { connect } from "react-redux";
 import { Container, Row, Col } from "reactstrap";
 import { formatDate } from "../../utils/helpers";
 
-function QestionBox({ Answered, question, author, autheduserAns }) {
+function QestionBox({
+  Answered,
+  question,
+  author,
+  autheduserAns,
+  authedAnswered,
+}) {
   // Answered, question --> comming from AnsweredQuestion -OR- UnAnsweredQuestion
-  // author, autheduserAns --> comming from connect redux
+  // author, autheduserAns, authedAnswered --> comming from connect redux
 
   return (
     <Container>
@@ -37,7 +43,7 @@ function QestionBox({ Answered, question, author, autheduserAns }) {
                 </span>
               </Col>
             </Row>
-            {Answered && (
+            {Answered && authedAnswered && (
               <Row className="mt-1 pl-4">
                 <div className="answer">
                   <hr />
@@ -62,9 +68,13 @@ const mapStateToProps = ({ users, authedUserId }, { question }) => {
   const autheduserAns =
     authedUserSelection && question[authedUserSelection].text;
 
+  const authedAnswered = users[authedUserId].answers.hasOwnProperty(
+    question.id
+  );
   return {
     author,
     autheduserAns,
+    authedAnswered,
   };
 };
 

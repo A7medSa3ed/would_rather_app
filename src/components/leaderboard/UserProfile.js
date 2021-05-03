@@ -14,6 +14,7 @@ const UserProfile = ({
   // match, tabState --> comming from user Profile Page
 
   if (!userId || authedUserId === "") return <Redirect to="/" />;
+
   return (
     <Home
       userQuestions={userQuestions}

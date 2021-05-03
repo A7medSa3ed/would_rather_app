@@ -3,8 +3,8 @@ import { Container, Row, Col } from "reactstrap";
 import QestionBox from "./../question/QestionBox";
 import { Link } from "react-router-dom";
 
-const UnansweredQuestion = ({ unAnsweredQuestions }) => {
-  // unAnsweredQuestions --> parent component (index of home folder)
+const UnansweredQuestion = ({ unAnsweredQuestions, Answered, userId }) => {
+  // unAnsweredQuestions, Answered, userId --> parent component (index of home folder)
   return (
     <div className="unanswered_question">
       <Container>
@@ -14,8 +14,13 @@ const UnansweredQuestion = ({ unAnsweredQuestions }) => {
           ) : (
             unAnsweredQuestions.map(question => (
               <Col className="col-lg-6 col-sm-12 m-auto" key={question.id}>
-                <Link to={`/questions/${question.id}`}>
-                  <QestionBox question={question} Answered={false} />
+                <Link
+                  to={{
+                    pathname: `/questions/${question.id}`,
+                    state: { userId, tab: 0 },
+                  }}
+                >
+                  <QestionBox question={question} Answered={Answered} />
                 </Link>
               </Col>
             ))

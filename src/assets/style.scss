@@ -1,0 +1,80 @@
+@import "./nav";
+@import "./home";
+@import "./question";
+@import "./signInUp";
+@import "./leaderboard";
+@import "./notFound";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.card {
+  font-size: 20px !important;
+  box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%),
+    0px 3px 1px -2px rgb(0 0 0 / 12%) !important;
+  border: 2px solid #ccc !important;
+}
+
+.green {
+  button {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    margin-left: 2%;
+    padding: 1%;
+    color: #31df80;
+    background: transparent;
+    border: 2px solid #31df80;
+    text-align: center;
+    font-family: comfortaa;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-family: cursive;
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      box-sizing: border-box;
+      border: 2px solid #31df80;
+      width: 1em;
+      height: 1em;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:before {
+      top: -6px;
+      left: -6px;
+      border-width: 2px 0 0 2px;
+      z-index: 5;
+    }
+    &:after {
+      bottom: -6px;
+      right: -6px;
+      border-width: 0 2px 2px 0;
+    }
+
+    &:hover:before,
+    &:hover:after {
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      border-color: #31df80;
+      transform: rotateY(180deg);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      border-color: #f38b8b;
+      color: #f38b8b;
+      &:after,
+      &:before {
+        border-color: #f38b8b;
+      }
+    }
+  }
+}

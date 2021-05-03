@@ -1,0 +1,13 @@
+.answered_question {
+  p {
+    margin: 20px auto;
+    color: blue;
+    font-size: 35px;
+    font-family: cursive;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

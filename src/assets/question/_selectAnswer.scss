@@ -1,0 +1,91 @@
+.select_answer {
+  margin: 3% auto;
+  &.card {
+    padding: 2%;
+    h3 {
+      text-transform: capitalize;
+      font-family: cursive;
+    }
+    .green {
+      button {
+        width: 170px;
+        margin-left: 3%;
+      }
+    }
+  }
+  .select_options {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    width: 100%;
+    background: #fff;
+    padding: 2rem 0 1rem 1rem;
+    border-radius: 1rem;
+    label {
+      display: block;
+      position: relative;
+      height: 1em;
+      padding-left: 3rem;
+      margin-bottom: 3rem;
+      cursor: pointer;
+      font-size: 22px;
+      user-select: none;
+      color: #555;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      font-family: cursive;
+      &:hover input:not(:checked) ~ .radio {
+        opacity: 0.8;
+        background-color: rgb(146, 223, 153);
+      }
+      input {
+        position: absolute;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        left: -2000px;
+        &:checked {
+          ~ .radio {
+            background-color: #0ac07d;
+            transition: background 0.3s;
+            &::after {
+              opacity: 1;
+            }
+          }
+          ~ .label {
+            color: #0bae72;
+          }
+        }
+      }
+      .radio {
+        position: absolute;
+        top: 0.2rem;
+        left: 0;
+        height: 2rem;
+        width: 2rem;
+        background: #c9ded6;
+        border-radius: 50%;
+        &::after {
+          content: "";
+          position: absolute;
+          opacity: 0;
+          top: 0.5rem;
+          left: 0.5rem;
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #fff;
+        }
+      }
+      .label {
+        display: flex;
+        align-items: center;
+        padding-right: 3rem;
+        span {
+          line-height: 1em;
+        }
+      }
+    }
+  }
+}

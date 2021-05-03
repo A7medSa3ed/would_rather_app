@@ -1,0 +1,93 @@
+nav {
+  background-color: #f8f9fa;
+  h3 {
+    font-weight: bold;
+  }
+  .row {
+    height: 70px;
+    align-items: center;
+    .logo {
+      justify-content: left;
+      align-items: center;
+      display: flex;
+      padding-left: 0;
+      text-align: left;
+      h3 {
+        font-size: 26px;
+        color: #31df80;
+      }
+    }
+    .links {
+      ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        a {
+          li {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            &:hover {
+              text-decoration: none;
+              color: #000;
+            }
+          }
+
+          &.active li,
+          &:hover {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      button {
+        background-color: #cccccc40;
+        color: rgba(0, 0, 0, 0.87);
+        padding: 6px 16px;
+        font-size: 0.875rem;
+        min-width: 64px;
+        box-sizing: border-box;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+          box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+          border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        line-height: 1.75;
+        font-weight: 500;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        border-radius: 4px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        &:hover {
+          border: 1px solid #ccc;
+        }
+      }
+      span {
+        color: #000;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-family: cursive;
+      }
+      img {
+        width: 15%;
+        height: 15%;
+        border-radius: 50%;
+        text-align: center;
+        object-fit: cover;
+      }
+    }
+  }
+}

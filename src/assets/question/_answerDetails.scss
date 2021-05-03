@@ -1,0 +1,31 @@
+.answer_details {
+  margin: 3% auto;
+  &.card {
+    padding: 2%;
+    h3 {
+      text-transform: capitalize;
+      font-family: cursive;
+    }
+  }
+  .author_info {
+    span {
+      font-family: cursive;
+      color: #a932006e;
+      font-size: 18px;
+    }
+  }
+  .progress-desc {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-transform: capitalize;
+  }
+  .progress {
+    height: 0.4rem;
+
+    .progress-bar {
+      background-color: #1eca8bde;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.signup {
+  margin: 100px;
+  button:disabled {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}

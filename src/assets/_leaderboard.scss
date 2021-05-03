@@ -1,0 +1,30 @@
+.leaderboard {
+  $primary: #11998e;
+  $secondary: #38ef7d;
+  $white: #000;
+  $gray: #9b9b9b;
+
+  &.card {
+    padding: 2%;
+    margin: 3% auto;
+    h3 {
+      text-transform: capitalize;
+      font-family: cursive;
+      font-size: 30px;
+    }
+  }
+  .users {
+    &:hover {
+      transform: scale(1.02);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+  }
+  .details {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+  }
+  .active {
+    background-color: #00ff1f38;
+  }
+}

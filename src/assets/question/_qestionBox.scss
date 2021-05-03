@@ -1,0 +1,33 @@
+.question_box {
+  .card {
+    padding: 2%;
+    h5 {
+      text-transform: capitalize;
+      font-family: cursive;
+      color: #000;
+    }
+    .details {
+      span {
+        color: #00d05f;
+        font-size: 20px;
+        font-family: cursive;
+      }
+    }
+    .answer {
+      color: #6700ff;
+      font-size: 20px;
+      text-transform: capitalize;
+      font-family: cursive;
+      span {
+        &:nth-of-type(2) {
+          font-weight: bold;
+        }
+      }
+    }
+    &:hover {
+      transform: scale(1.01);
+      cursor: pointer;
+      transition: all 0.2s linear;
+    }
+  }
+}

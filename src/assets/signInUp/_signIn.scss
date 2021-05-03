@@ -1,0 +1,70 @@
+.loggin {
+  padding-top: 40px;
+  h6 {
+    font-size: 25px;
+    padding-bottom: 30px;
+    text-transform: capitalize;
+  }
+  .dropdown {
+    font-family: cursive;
+    button {
+      position: relative;
+      text-align: left;
+      background-color: inherit;
+      border: none;
+      color: #000;
+      border-bottom: 1px solid #ccc;
+      &::after {
+        position: absolute;
+        right: 3%;
+        top: 50%;
+      }
+      .select {
+        .col-2 {
+          img {
+            width: 100% !important;
+            height: 100% !important;
+            text-align: left !important;
+          }
+        }
+        .col-6 {
+          display: flex;
+          align-items: center;
+          align-content: center;
+          justify-content: left;
+          font-size: 20px;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .dropdown-menu {
+      width: 100%;
+      padding-bottom: 0;
+
+      .dropdown-item {
+        font-size: 20px;
+        text-transform: capitalize;
+        img {
+          width: 10% !important;
+          height: 10% !important;
+          border-radius: 50%;
+        }
+        &:hover {
+          font-size: 25px;
+          background-color: #31df8066;
+          transform: scale(1.02);
+          img {
+            border-radius: 50%;
+            width: 12% !important;
+            height: 12% !important;
+          }
+        }
+      }
+    }
+  }
+  .logginButton {
+    width: 200px;
+    padding: 1%;
+    font-size: 18px;
+  }
+}

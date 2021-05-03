@@ -10,7 +10,11 @@ const UnansweredQuestion = ({ unAnsweredQuestions, Answered, userId }) => {
       <Container>
         <Row>
           {unAnsweredQuestions.length === 0 ? (
-            <p>All Questions Is Answered</p>
+            <p>
+              {userId
+                ? "There Is No Question Yet"
+                : "All Questions Is Answered"}
+            </p>
           ) : (
             unAnsweredQuestions.map(question => (
               <Col className="col-lg-6 col-sm-12 m-auto" key={question.id}>
